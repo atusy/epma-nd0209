@@ -1,0 +1,15 @@
+eos.cnd_version : 1.1
+15.0              Accelerating Voltage kV
+63                Condenser lens (Coase)
+271               Condenser lens (Fine)
+953964             Object lens (Coase)
+0                 Object lens (Fine)
+10                Probe dianometor
+40                magnification
+F                 Probe scan Off
+PIC               Probe scan mode
+S1                kind of scan speed
+F                 Auto Focus Off
+F                 Auto Stigmator Off
+F                 Beam Stabilizer F:Off O:TLCL TLON:Tilt Only CLON:Cl Only  
+1.001e-08 Normal    Probe Current A

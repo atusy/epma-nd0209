@@ -1,0 +1,23 @@
+1          number of stage
+O          measurement On / oFf
+S          Stage scan / Beam scan
+N          Normal drive / Micro drive
+44.8735    center X (mm)
+70.5020    center Y (mm)
+10.8582    center Z (mm)
+35.6665    start X (mm)
+63.3110    start Y (mm)
+10.8307    start Z (mm)
+1024       pixels X 
+800        pixels Y 
+18.000     pixel size X (um)
+18.000     pixel size Y (um)
+10.8629    top2 Z (mm)
+10.8857    top3 Z (mm)
+10.8535    top4 Z (mm)
+U          scan Uni / scan Bi
+0          data length
+2          dwell time (msec)
+40         dummy data
+1          number of accumulations
+LrgGrt                                            

@@ -1,0 +1,491 @@
+49         number of stage
+Y          Mesurement Yes / No  1 
+S          Stage scan / Beam scan
+54.5385    X coordinate mm
+66.2700    Y coordinate mm
+10.8630    Z coordinate mm
+1020       Beam X coordinate dots
+1015       Beam Y coordinate dots
+40         Magnification of beam scan case
+1          accumulation
+Omp1                                              
+Y          Mesurement Yes / No  2 
+S          Stage scan / Beam scan
+54.9175    X coordinate mm
+66.6440    Y coordinate mm
+10.8645    Z coordinate mm
+1020       Beam X coordinate dots
+1015       Beam Y coordinate dots
+40         Magnification of beam scan case
+1          accumulation
+Omp2                                              
+Y          Mesurement Yes / No  3 
+S          Stage scan / Beam scan
+54.5035    X coordinate mm
+65.2125    Y coordinate mm
+10.8610    Z coordinate mm
+1020       Beam X coordinate dots
+1015       Beam Y coordinate dots
+40         Magnification of beam scan case
+1          accumulation
+Omp3                                              
+Y          Mesurement Yes / No  4 
+S          Stage scan / Beam scan
+56.3010    X coordinate mm
+68.2925    Y coordinate mm
+10.8705    Z coordinate mm
+1020       Beam X coordinate dots
+1015       Beam Y coordinate dots
+40         Magnification of beam scan case
+1          accumulation
+Omp4                                              
+Y          Mesurement Yes / No  5 
+S          Stage scan / Beam scan
+56.2045    X coordinate mm
+68.5540    Y coordinate mm
+10.8700    Z coordinate mm
+1020       Beam X coordinate dots
+1015       Beam Y coordinate dots
+40         Magnification of beam scan case
+1          accumulation
+Omp5                                              
+Y          Mesurement Yes / No  6 
+S          Stage scan / Beam scan
+54.3240    X coordinate mm
+69.6580    Y coordinate mm
+10.8705    Z coordinate mm
+1020       Beam X coordinate dots
+1015       Beam Y coordinate dots
+40         Magnification of beam scan case
+1          accumulation
+Omp6                                              
+Y          Mesurement Yes / No  7 
+S          Stage scan / Beam scan
+54.5815    X coordinate mm
+69.7290    Y coordinate mm
+10.8705    Z coordinate mm
+1020       Beam X coordinate dots
+1015       Beam Y coordinate dots
+40         Magnification of beam scan case
+1          accumulation
+Omp7                                              
+Y          Mesurement Yes / No  8 
+S          Stage scan / Beam scan
+54.8495    X coordinate mm
+70.0050    Y coordinate mm
+10.8705    Z coordinate mm
+1020       Beam X coordinate dots
+1015       Beam Y coordinate dots
+40         Magnification of beam scan case
+1          accumulation
+Omp8                                              
+Y          Mesurement Yes / No  9 
+S          Stage scan / Beam scan
+54.8720    X coordinate mm
+70.0040    Y coordinate mm
+10.8705    Z coordinate mm
+1020       Beam X coordinate dots
+1015       Beam Y coordinate dots
+40         Magnification of beam scan case
+1          accumulation
+Omp9                                              
+Y          Mesurement Yes / No  10 
+S          Stage scan / Beam scan
+55.9595    X coordinate mm
+72.1495    Y coordinate mm
+10.8765    Z coordinate mm
+1020       Beam X coordinate dots
+1015       Beam Y coordinate dots
+40         Magnification of beam scan case
+1          accumulation
+Omp10                                             
+Y          Mesurement Yes / No  11 
+S          Stage scan / Beam scan
+56.2650    X coordinate mm
+72.3290    Y coordinate mm
+10.8775    Z coordinate mm
+1020       Beam X coordinate dots
+1015       Beam Y coordinate dots
+40         Magnification of beam scan case
+1          accumulation
+Omp11                                             
+Y          Mesurement Yes / No  12 
+S          Stage scan / Beam scan
+57.7035    X coordinate mm
+72.6520    Y coordinate mm
+10.8795    Z coordinate mm
+1020       Beam X coordinate dots
+1015       Beam Y coordinate dots
+40         Magnification of beam scan case
+1          accumulation
+Omp12                                             
+Y          Mesurement Yes / No  13 
+S          Stage scan / Beam scan
+57.7005    X coordinate mm
+72.7285    Y coordinate mm
+10.8795    Z coordinate mm
+1020       Beam X coordinate dots
+1015       Beam Y coordinate dots
+40         Magnification of beam scan case
+1          accumulation
+Omp13                                             
+Y          Mesurement Yes / No  14 
+S          Stage scan / Beam scan
+53.7990    X coordinate mm
+75.2045    Y coordinate mm
+10.8795    Z coordinate mm
+1020       Beam X coordinate dots
+1015       Beam Y coordinate dots
+40         Magnification of beam scan case
+1          accumulation
+Omp14                                             
+Y          Mesurement Yes / No  15 
+S          Stage scan / Beam scan
+54.0960    X coordinate mm
+75.0395    Y coordinate mm
+10.8795    Z coordinate mm
+1020       Beam X coordinate dots
+1015       Beam Y coordinate dots
+40         Magnification of beam scan case
+1          accumulation
+Omp15                                             
+Y          Mesurement Yes / No  16 
+S          Stage scan / Beam scan
+52.7195    X coordinate mm
+75.8165    Y coordinate mm
+10.8795    Z coordinate mm
+1020       Beam X coordinate dots
+1015       Beam Y coordinate dots
+40         Magnification of beam scan case
+1          accumulation
+Omp16                                             
+Y          Mesurement Yes / No  17 
+S          Stage scan / Beam scan
+53.1625    X coordinate mm
+76.3165    Y coordinate mm
+10.8840    Z coordinate mm
+1020       Beam X coordinate dots
+1015       Beam Y coordinate dots
+40         Magnification of beam scan case
+1          accumulation
+Omp17                                             
+Y          Mesurement Yes / No  18 
+S          Stage scan / Beam scan
+52.6065    X coordinate mm
+76.3330    Y coordinate mm
+10.8815    Z coordinate mm
+1020       Beam X coordinate dots
+1015       Beam Y coordinate dots
+40         Magnification of beam scan case
+1          accumulation
+Omp18                                             
+Y          Mesurement Yes / No  19 
+S          Stage scan / Beam scan
+52.7995    X coordinate mm
+76.7645    Y coordinate mm
+10.8835    Z coordinate mm
+1020       Beam X coordinate dots
+1015       Beam Y coordinate dots
+40         Magnification of beam scan case
+1          accumulation
+Omp19                                             
+Y          Mesurement Yes / No  20 
+S          Stage scan / Beam scan
+51.8460    X coordinate mm
+77.8900    Y coordinate mm
+10.8840    Z coordinate mm
+1020       Beam X coordinate dots
+1015       Beam Y coordinate dots
+40         Magnification of beam scan case
+1          accumulation
+Omp20                                             
+Y          Mesurement Yes / No  21 
+S          Stage scan / Beam scan
+51.4075    X coordinate mm
+78.1810    Y coordinate mm
+10.8840    Z coordinate mm
+1020       Beam X coordinate dots
+1015       Beam Y coordinate dots
+40         Magnification of beam scan case
+1          accumulation
+Omp21                                             
+Y          Mesurement Yes / No  22 
+S          Stage scan / Beam scan
+47.6170    X coordinate mm
+79.0380    Y coordinate mm
+10.8810    Z coordinate mm
+1020       Beam X coordinate dots
+1015       Beam Y coordinate dots
+40         Magnification of beam scan case
+1          accumulation
+Omp22                                             
+Y          Mesurement Yes / No  23 
+S          Stage scan / Beam scan
+47.0935    X coordinate mm
+78.9740    Y coordinate mm
+10.8795    Z coordinate mm
+1020       Beam X coordinate dots
+1015       Beam Y coordinate dots
+40         Magnification of beam scan case
+1          accumulation
+Omp23                                             
+Y          Mesurement Yes / No  24 
+S          Stage scan / Beam scan
+45.7990    X coordinate mm
+79.3810    Y coordinate mm
+10.8785    Z coordinate mm
+1020       Beam X coordinate dots
+1015       Beam Y coordinate dots
+40         Magnification of beam scan case
+1          accumulation
+Omp24                                             
+Y          Mesurement Yes / No  25 
+S          Stage scan / Beam scan
+46.2535    X coordinate mm
+79.6075    Y coordinate mm
+10.8785    Z coordinate mm
+1020       Beam X coordinate dots
+1015       Beam Y coordinate dots
+40         Magnification of beam scan case
+1          accumulation
+Omp25                                             
+Y          Mesurement Yes / No  26 
+S          Stage scan / Beam scan
+47.7375    X coordinate mm
+81.9145    Y coordinate mm
+10.8865    Z coordinate mm
+1020       Beam X coordinate dots
+1015       Beam Y coordinate dots
+40         Magnification of beam scan case
+1          accumulation
+Omp26                                             
+Y          Mesurement Yes / No  27 
+S          Stage scan / Beam scan
+48.4365    X coordinate mm
+82.0910    Y coordinate mm
+10.8865    Z coordinate mm
+1020       Beam X coordinate dots
+1015       Beam Y coordinate dots
+40         Magnification of beam scan case
+1          accumulation
+Omp27                                             
+Y          Mesurement Yes / No  28 
+S          Stage scan / Beam scan
+48.6425    X coordinate mm
+82.6965    Y coordinate mm
+10.8895    Z coordinate mm
+1020       Beam X coordinate dots
+1015       Beam Y coordinate dots
+40         Magnification of beam scan case
+1          accumulation
+Omp28                                             
+Y          Mesurement Yes / No  29 
+S          Stage scan / Beam scan
+48.8230    X coordinate mm
+82.9720    Y coordinate mm
+10.8885    Z coordinate mm
+1020       Beam X coordinate dots
+1015       Beam Y coordinate dots
+40         Magnification of beam scan case
+1          accumulation
+Omp29                                             
+Y          Mesurement Yes / No  30 
+S          Stage scan / Beam scan
+50.7755    X coordinate mm
+80.4900    Y coordinate mm
+10.8880    Z coordinate mm
+1020       Beam X coordinate dots
+1015       Beam Y coordinate dots
+40         Magnification of beam scan case
+1          accumulation
+Omp30                                             
+Y          Mesurement Yes / No  31 
+S          Stage scan / Beam scan
+50.8430    X coordinate mm
+80.3925    Y coordinate mm
+10.8865    Z coordinate mm
+1020       Beam X coordinate dots
+1015       Beam Y coordinate dots
+40         Magnification of beam scan case
+1          accumulation
+Omp31                                             
+Y          Mesurement Yes / No  32 
+S          Stage scan / Beam scan
+51.5430    X coordinate mm
+79.6365    Y coordinate mm
+10.8865    Z coordinate mm
+1020       Beam X coordinate dots
+1015       Beam Y coordinate dots
+40         Magnification of beam scan case
+1          accumulation
+Omp32                                             
+Y          Mesurement Yes / No  33 
+S          Stage scan / Beam scan
+51.5990    X coordinate mm
+79.6555    Y coordinate mm
+10.8865    Z coordinate mm
+1020       Beam X coordinate dots
+1015       Beam Y coordinate dots
+40         Magnification of beam scan case
+1          accumulation
+Omp33                                             
+Y          Mesurement Yes / No  34 
+S          Stage scan / Beam scan
+54.7835    X coordinate mm
+81.9750    Y coordinate mm
+10.8980    Z coordinate mm
+1020       Beam X coordinate dots
+1015       Beam Y coordinate dots
+40         Magnification of beam scan case
+1          accumulation
+Omp34                                             
+Y          Mesurement Yes / No  35 
+S          Stage scan / Beam scan
+54.6830    X coordinate mm
+81.7705    Y coordinate mm
+10.8970    Z coordinate mm
+1020       Beam X coordinate dots
+1015       Beam Y coordinate dots
+40         Magnification of beam scan case
+1          accumulation
+Omp35                                             
+Y          Mesurement Yes / No  36 
+S          Stage scan / Beam scan
+53.2695    X coordinate mm
+83.1800    Y coordinate mm
+10.8985    Z coordinate mm
+1020       Beam X coordinate dots
+1015       Beam Y coordinate dots
+40         Magnification of beam scan case
+1          accumulation
+Omp36                                             
+Y          Mesurement Yes / No  37 
+S          Stage scan / Beam scan
+53.3405    X coordinate mm
+83.2430    Y coordinate mm
+10.8980    Z coordinate mm
+1020       Beam X coordinate dots
+1015       Beam Y coordinate dots
+40         Magnification of beam scan case
+1          accumulation
+Omp37                                             
+Y          Mesurement Yes / No  38 
+S          Stage scan / Beam scan
+51.4140    X coordinate mm
+86.2250    Y coordinate mm
+10.8995    Z coordinate mm
+1020       Beam X coordinate dots
+1015       Beam Y coordinate dots
+40         Magnification of beam scan case
+1          accumulation
+Omp38                                             
+Y          Mesurement Yes / No  39 
+S          Stage scan / Beam scan
+51.1935    X coordinate mm
+86.1075    Y coordinate mm
+10.8985    Z coordinate mm
+1020       Beam X coordinate dots
+1015       Beam Y coordinate dots
+40         Magnification of beam scan case
+1          accumulation
+Omp39                                             
+Y          Mesurement Yes / No  40 
+S          Stage scan / Beam scan
+50.4235    X coordinate mm
+88.1530    Y coordinate mm
+10.9030    Z coordinate mm
+1020       Beam X coordinate dots
+1015       Beam Y coordinate dots
+40         Magnification of beam scan case
+1          accumulation
+Omp40                                             
+Y          Mesurement Yes / No  41 
+S          Stage scan / Beam scan
+50.4910    X coordinate mm
+88.2770    Y coordinate mm
+10.9030    Z coordinate mm
+1020       Beam X coordinate dots
+1015       Beam Y coordinate dots
+40         Magnification of beam scan case
+1          accumulation
+Omp41                                             
+Y          Mesurement Yes / No  42 
+S          Stage scan / Beam scan
+49.7245    X coordinate mm
+91.2570    Y coordinate mm
+10.9055    Z coordinate mm
+1020       Beam X coordinate dots
+1015       Beam Y coordinate dots
+40         Magnification of beam scan case
+1          accumulation
+Omp42                                             
+Y          Mesurement Yes / No  43 
+S          Stage scan / Beam scan
+50.2990    X coordinate mm
+91.4610    Y coordinate mm
+10.9055    Z coordinate mm
+1020       Beam X coordinate dots
+1015       Beam Y coordinate dots
+40         Magnification of beam scan case
+1          accumulation
+Omp43                                             
+Y          Mesurement Yes / No  44 
+S          Stage scan / Beam scan
+53.3625    X coordinate mm
+92.3260    Y coordinate mm
+10.9130    Z coordinate mm
+1020       Beam X coordinate dots
+1015       Beam Y coordinate dots
+40         Magnification of beam scan case
+1          accumulation
+Omp44                                             
+Y          Mesurement Yes / No  45 
+S          Stage scan / Beam scan
+54.0510    X coordinate mm
+92.3710    Y coordinate mm
+10.9140    Z coordinate mm
+1020       Beam X coordinate dots
+1015       Beam Y coordinate dots
+40         Magnification of beam scan case
+1          accumulation
+Omp45                                             
+Y          Mesurement Yes / No  46 
+S          Stage scan / Beam scan
+54.4915    X coordinate mm
+94.6660    Y coordinate mm
+10.9170    Z coordinate mm
+1020       Beam X coordinate dots
+1015       Beam Y coordinate dots
+40         Magnification of beam scan case
+1          accumulation
+Omp46                                             
+Y          Mesurement Yes / No  47 
+S          Stage scan / Beam scan
+54.9120    X coordinate mm
+94.8775    Y coordinate mm
+10.9170    Z coordinate mm
+1020       Beam X coordinate dots
+1015       Beam Y coordinate dots
+40         Magnification of beam scan case
+1          accumulation
+Omp47                                             
+Y          Mesurement Yes / No  48 
+S          Stage scan / Beam scan
+45.2420    X coordinate mm
+94.9030    Y coordinate mm
+10.9010    Z coordinate mm
+1020       Beam X coordinate dots
+1015       Beam Y coordinate dots
+40         Magnification of beam scan case
+1          accumulation
+Omp48                                             
+Y          Mesurement Yes / No  49 
+S          Stage scan / Beam scan
+45.4775    X coordinate mm
+94.7955    Y coordinate mm
+10.9035    Z coordinate mm
+1020       Beam X coordinate dots
+1015       Beam Y coordinate dots
+40         Magnification of beam scan case
+1          accumulation
+Omp49                                             

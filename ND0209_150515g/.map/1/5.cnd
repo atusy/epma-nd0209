@@ -1,0 +1,29 @@
+$CM_TYPE            Image
+$CM_NAME            yasumoto/ND0209_150515g
+$CM_COMMENT         Guide 1-1                               
+$CM_DATE            2015-05-16
+$CM_TIME            08:21:00
+$CM_INSTRUMENT      JXA-8800
+$CM_DATA_TYPE       0
+$CM_FRAME_SIZE      800 1024
+$CM_DATA_BIT        16
+$CM_BYTE_ORDER      0
+$CM_ACCEL_VOLT      15.0 kV
+$CM_MAG             40
+$CM_CURRENT         6.104e-08
+$CM_SCAN_SPEED      S1		
+$CM_ACCUMULATION    1
+$CM_PIXEL_MES       10 msec
+$CM_PIXEL_SIZE      9.00 9.00 um
+$CM_STAGE_POS       45.7485 85.6640 10.8708 mm
+$CM_MAX_MIN_AVE     85 0 10
+$XM_APPLICATION     Map Analysis
+$XM_ELEMENT         Na
+$XM_CHANNEL         5
+$XM_CRYSTAL         TAPH    
+$XM_CRYSTAL_NO      1
+$XM_SCAN_TYPE       S
+$XM_DWELL_TIME      10 msec
+$XM_STEP_SIZE       9.00 9.00 um
+$XM_MAP_START       41.1450 82.0685 10.8740 mm
+$XM_POINTS          800 1024

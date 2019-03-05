@@ -1,0 +1,35 @@
+
+
+
+Measurement Condition 
+WDS elements 
+Element  X-ray Crystal   CH  Acc.v   Peak Pos.     (nm)    BG_L    BG_U (mm) 
+ 1 Ca    Ka     PET     ( 1)  15.0    107.553    0.33584   4.000   4.000
+ 2 Si    Ka     TAP     ( 2)  15.0     77.432    0.71254   2.400   3.000
+ 3 Cr    Ka     LIFH    ( 3)  15.0    159.374    0.22897   5.000   5.000
+ 4 Fe    Ka     LIF     ( 4)  15.0    134.737    0.19360   1.500   2.000
+ 5 Mg    Ka     TAPH    ( 5)  15.0    107.532    0.98900   2.500   5.000
+ 6 K     Ka     PET     ( 1)  15.0    119.818    0.37414   4.500   3.000
+ 7 Al    Ka     TAP     ( 2)  15.0     90.637    0.83393   3.000   3.500
+ 8 Mn    Ka     LIFH    ( 3)  15.0    146.384    0.21018   5.000   5.000
+ 9 Ti    Ka     LIF     ( 4)  15.0    191.110    0.27485   3.000   5.000
+10 Na    Ka     TAPH    ( 5)  15.0    129.300    1.19101   5.000   5.000
+
+Element   Peak  Back        Pksk  Gain  High.V Base.L Window.W  Mode 
+ 1 Ca     10.0   5.0 (s)       1    64   1710   0.7     -  (V)   Int
+ 2 Si     10.0   5.0 (s)       1    32   1684   0.7     -  (V)   Int
+ 3 Cr     10.0   5.0 (s)       1    32   1716   0.7     -  (V)   Int
+ 4 Fe     10.0   5.0 (s)       1    32   1762   0.7     -  (V)   Int
+ 5 Mg     10.0   5.0 (s)       1    32   1742   0.7    9.3 (V)   Dif
+ 6 K      10.0   5.0 (s)       1    64   1710   0.7     -  (V)   Int
+ 7 Al     10.0   5.0 (s)       1    32   1684   0.7     -  (V)   Int
+ 8 Mn     10.0   5.0 (s)       1    32   1716   0.7     -  (V)   Int
+ 9 Ti     10.0   5.0 (s)       1    32   1762   0.7     -  (V)   Int
+10 Na     10.0   5.0 (s)       0    32   1742   0.7    9.3 (V)   Dif
+
+Measurement Order of WDS 
+Order     Channel 1           2           3           4           5          
+  1               Ca          Si          Cr          Fe          Mg          
+  2               K           Al          Mn          Ti          Na          
+
+Calc. Elements :  O  (Anion)        

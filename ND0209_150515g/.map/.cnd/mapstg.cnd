@@ -1,0 +1,10 @@
+S		Stage(S) / Beam(B)
+N		Normal Step(N) / Micro Step(M)
+U		uni(U) / bi(B)
+10		Dwell Time (ms)
+1024		X Pixels
+800		Y Pixels
+9.00		X Pixel Size
+9.00		Y Pixel Size
+40		Magnification
+1		Accumulation

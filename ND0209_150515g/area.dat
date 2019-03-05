@@ -1,0 +1,89 @@
+4          number of stage
+O          measurement On / oFf
+S          Stage scan / Beam scan
+N          Normal drive / Micro drive
+45.7485    center X (mm)
+85.6640    center Y (mm)
+10.8708    center Z (mm)
+41.1450    start X (mm)
+82.0685    start Y (mm)
+10.8740    start Z (mm)
+1024       pixels X 
+800        pixels Y 
+9.000      pixel size X (um)
+9.000      pixel size Y (um)
+10.8695    top2 Z (mm)
+10.8675    top3 Z (mm)
+10.8710    top4 Z (mm)
+U          scan Uni / scan Bi
+0          data length
+10         dwell time (msec)
+40         dummy data
+1          number of accumulations
+Guide 1-1                                         
+O          measurement On / oFf
+S          Stage scan / Beam scan
+N          Normal drive / Micro drive
+45.7485    center X (mm)
+92.8640    center Y (mm)
+10.8655    center Z (mm)
+41.1450    start X (mm)
+89.2685    start Y (mm)
+10.8695    start Z (mm)
+1024       pixels X 
+800        pixels Y 
+9.000      pixel size X (um)
+9.000      pixel size Y (um)
+10.8645    top2 Z (mm)
+10.8615    top3 Z (mm)
+10.8675    top4 Z (mm)
+U          scan Uni / scan Bi
+0          data length
+10         dwell time (msec)
+40         dummy data
+1          number of accumulations
+Guide 1-2                                         
+O          measurement On / oFf
+S          Stage scan / Beam scan
+N          Normal drive / Micro drive
+54.9645    center X (mm)
+85.6640    center Y (mm)
+10.8665    center Z (mm)
+50.3610    start X (mm)
+82.0685    start Y (mm)
+10.8710    start Z (mm)
+1024       pixels X 
+800        pixels Y 
+9.000      pixel size X (um)
+9.000      pixel size Y (um)
+10.8675    top2 Z (mm)
+10.8620    top3 Z (mm)
+10.8680    top4 Z (mm)
+U          scan Uni / scan Bi
+0          data length
+10         dwell time (msec)
+40         dummy data
+1          number of accumulations
+Guide 2-1                                         
+O          measurement On / oFf
+S          Stage scan / Beam scan
+N          Normal drive / Micro drive
+54.9645    center X (mm)
+92.8640    center Y (mm)
+10.8655    center Z (mm)
+50.3610    start X (mm)
+89.2685    start Y (mm)
+10.8675    start Z (mm)
+1024       pixels X 
+800        pixels Y 
+9.000      pixel size X (um)
+9.000      pixel size Y (um)
+10.8615    top2 Z (mm)
+10.8635    top3 Z (mm)
+10.8620    top4 Z (mm)
+U          scan Uni / scan Bi
+0          data length
+10         dwell time (msec)
+40         dummy data
+1          number of accumulations
+Guide 2-2                                         
