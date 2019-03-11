@@ -1,0 +1,44 @@
+---
+title: "EPMA ND0209"
+output: html_notebook
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+pacman::p_load_gh("atusy/qntmap", "atusy/atusyverse")
+```
+
+# Read data
+
+## Cpx
+
+```{r}
+qn <- dir(pattern = "^ND.*o$") %>>%
+  set_names %>>%
+  map(dir, pattern = "\\.qnt$", all.files = TRUE, full.names = TRUE) %>>%
+  unlist() %>>%
+  map(read_qnt)
+```
+
+## Thin section scan
+
+```{r}
+thin <- "/home/atusy/Documents/R/proj/PhD/_sample/ND0209/ND0209.jpg" %>>%
+  magick::image_read()
+thin
+```
+
+
+# Positions
+
+```{r}
+qn %>>%
+  map(pluck, "cnd") %>>%
+  map(ggplot, aes(y, x)) %>>%
+  map(`+`, list(
+    geom_point()
+  )) %>>%
+  wrap_plots()
+
+```
+
