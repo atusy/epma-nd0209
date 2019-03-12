@@ -18,27 +18,141 @@ qn <- dir(pattern = "^ND.*o$") %>>%
   map(dir, pattern = "\\.qnt$", all.files = TRUE, full.names = TRUE) %>>%
   unlist() %>>%
   map(read_qnt)
+names(qn)
 ```
+
+### Calc Cpx
+
+```{r}
+cpx <- qn %>>%
+  map("cmp") %>>%
+  map("wt") %>>%
+  map(mutate,
+    O = 6,
+    Si = SiO2 / 60.08,
+    Ti = TiO2 / 79.866,
+    Al = Al2O3 * 2 / 101.960,
+    Cr = Cr2O3 * 2 / 151.9904,
+    Fe = FeO / 71.844,
+    Mn = MnO / 70.9374,
+    Mg = MgO / 40.304,
+    Ca = CaO / 56.0774,
+    Na = Na2O / 61.979 * 2,
+    K = K2O / 94.196 * 2,
+    e = 4 * (Si + Ti) + 3 * (Al + Cr) + 2 * (Fe + Mn + Mg + Ca) + Na + K,
+    k = O * 2 / e
+  ) %>>%
+  map(~ mutate_at(.x, c("Si", "Ti", "Al", "Cr", "Fe", "Mn", "Mg", "Ca", "Na", "K"), `*`, e2 = .x$k)) %>>%
+  map(mutate,
+    XCaTs = 2 - Si - 2 * Ti,
+    XJd = Na,
+    XMg = Mg / (Fe + Mg)
+  ) %>>%
+  map2(
+    qn %>>%
+      map("cnd") %>>%
+      map_at(
+        "ND0209_150423o", 
+        mutate,
+        y = - y + max(y) + .xlim[1] + 1,
+        x = - x + max(x) - .ylim[1] + 1.5
+      ), 
+    bind_cols) %>>%
+    bind_rows(.id = "nm") %>>%
+    mutate(
+      mode = c(ND0209_150423o = "In the matrix", ND0209_150515o = "In garnet")[nm] %>>%
+        {ifelse(nm == "ND0209_150423o" & id %in% c(3, 9, 12:13, 16:19, 30:39), "In garnet", .)} %>>%
+        forcats::fct_relevel("In garnet")
+    ) %>>%
+    identity()
+```
+
 
 ## Thin section scan
 
 ```{r}
-thin <- "/home/atusy/Documents/R/proj/PhD/_sample/ND0209/ND0209.jpg" %>>%
-  magick::image_read()
-thin
+thin <- magick::image_read("/home/atusy/Documents/R/proj/PhD/_sample/ND0209/ND0209.jpg")
 ```
 
 
 # Positions
 
 ```{r}
-qn %>>%
-  map(pluck, "cnd") %>>%
-  map(ggplot, aes(y, x)) %>>%
-  map(`+`, list(
-    geom_point()
-  )) %>>%
-  wrap_plots()
+.ylim <- c(-36.7, -60)
+.xlim <- 63.8 + c(0, abs(diff(.ylim)) * 2583 / 1824)
 
+pos <- cpx %>>%
+  ggplot(aes(y, -x, id = id)) +
+  annotation_raster(thin %>>% magick::image_rotate(-90), -Inf, Inf, -Inf, Inf) +
+  geom_point(aes(color = mode, fill = mode), shape = 21) +
+  scale_fill_manual("Mode", values =  c("In garnet" = "blue", "In the matrix" = "white")) +
+  scale_color_manual("Mode", values = c("In garnet" = "blue", "In the matrix" = "blue")) +
+  coord_fixed(
+    xlim = .xlim,
+    ylim = .ylim,
+    expand = FALSE
+  ) +
+  theme_void() +
+  geom_vline(xintercept = c(67, 70, 76), color = "magenta", lty = 2) +
+  annotate(
+    "text", 
+    label = paste0(c("Grt", "Cpx", "Grt", "Cpx"), "-rich layer"),
+    x = c(66, 68, 71, 77), y = -Inf, hjust = 0, color = "magenta", angle = 90
+  ) +
+  theme(legend.position = "top")
+pos
+```
+
+# Compositions
+
+```{r, warning = FALSE}
+cpx_cmp <- cpx %>>%
+  filter(XMg > .73) %>>%
+  transmute(
+    mm = y,
+    Cr2O3, TiO2, XJd, XMg,
+    mode
+  ) %>>%
+  bind_rows(data.frame(
+    mode = c("In garnet", "In the matrix"),
+    mm = NA,
+    Cr2O3 = c(0, .20),
+    TiO2 = c(0, .4),
+    XJd = c(.4, .55),
+    XMg = c(.74, .82)
+  )) %>>%
+  gather(var_y, val_y, -mm, -mode) %>>%
+  split(.$var_y) %>>%
+  `[`(c("XMg", "XJd", "Cr2O3", "TiO2")) %>>%
+  map(ggplot, aes(mm, val_y, color = mode, fill = mode)) %>>%
+  imap(~ {
+    .x +
+      geom_point(shape = 21, show.legend = FALSE) +
+      scale_x_continuous("mm", breaks = seq(.xlim[1], 100, 5), labels = function(x) x - .xlim[[1]], expand = c(0, 0)) +
+      labs(y = .y %>>%
+        str_replace_all(c("2" = "_2", "3" = "_3", "XMg" = "X_{Mg}", "XJd" = "X_{Jd}")) %>>%
+        latex2exp::TeX()
+      ) +
+      scale_fill_manual(values =  c("In garnet" = "blue", "In the matrix" = "white")) +
+      scale_color_manual(values = c("In garnet" = "blue", "In the matrix" = "blue")) +
+      coord_cartesian(xlim = .xlim) +
+      theme_classic()
+  }) %>>%
+  map_at(-length(.), `+`, theme(axis.title.x = element_blank(), axis.text.x = element_blank())) %>>%
+  (~ . %>>% wrap_plots(ncol = 1) %>>% print)
+```
+
+# Plot
+
+```{r, fig.width = 6.5, fig.height = 8, warning = FALSE}
+wrap_plots(c(list(pos), cpx_cmp), ncol = 1, heights = c(8,1,1,1,1))
+```
+
+```{r ggsave, eval = FALSE}
+nm <- "nd0209-cpx-chemistry.jpg"
+to <- "/home/atusy/Documents/R/proj/PhD/_fig/ND0209/"
+ggsave(nm, width = 6.5, height = 8)
+dir.create(to, showWarnings = FALSE, recursive = TRUE)
+file.copy(nm, to, overwrite = TRUE)
 ```
 

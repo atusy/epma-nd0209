@@ -12,7 +12,7 @@ Qnt: Grt
 
 ## ND0209_150423o
 
-Qnt: Omp
+Qnt: Omp in garnet
 
 ## ND0209_150515g
 
@@ -24,4 +24,4 @@ Qnt: Inclusions? of Grt Omp Spl
 
 ## ND0209_150515o
 
-Qnt: Omp
+Qnt: Omp in the matrix

@@ -1,0 +1,160 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+pacman::p_load_gh("atusy/qntmap", "atusy/atusyverse")
+```
+
+```{r}
+qn <- dir(pattern = "^ND.*g$") %>>%
+  set_names %>>%
+  map(dir, pattern = "\\.qnt$", all.files = TRUE, full.names = TRUE) %>>%
+  unlist() %>>%
+  map(read_qnt)
+names(qn)
+```
+
+```{r}
+grt <- qn %>>%
+  map("cmp") %>>%
+  map("wt") %>>%
+  map2(qn %>>% map("cnd"), bind_cols) %>>%
+  bind_rows(.id = "nm") %>>%
+  mutate(
+    O = 12,
+    Si = SiO2 / 60.08,
+    Ti = TiO2 / 79.866,
+    Al = Al2O3 * 2 / 101.960,
+    Cr = Cr2O3 * 2 / 151.9904,
+    Fe = FeO / 71.844,
+    Mn = MnO / 70.9374,
+    Mg = MgO / 40.304,
+    Ca = CaO / 56.0774,
+    Na = Na2O / 61.979 * 2,
+    K = K2O / 94.196 * 2,
+    e = 4 * (Si + Ti) + 3 * (Al + Cr) + 2 * (Fe + Mn + Mg + Ca) + Na + K,
+    k = O * 2 / e
+  ) %>>%
+  mutate_at(c("Si", "Ti", "Al", "Cr", "Fe", "Mn", "Mg", "Ca", "Na", "K"), `*`, e2 = .$k) %>>%
+  mutate(
+    Fe = FeO / 71.844,
+    Fe3 = NA_real_,
+    Mn = MnO / 70.9374,
+    Mg = MgO / 40.304,
+    Ca = CaO / 56.0774,
+    XMg = Mg / (Fe + Mg),
+    XGrs = Ca / (Fe + Mn + Mg + Ca)
+  ) %>>%
+  mutate(PB = x < 50 & y < 78) %>>%
+  identity()
+```
+
+# Thin section
+
+```{r}
+thin <- magick::image_read("/home/atusy/Documents/R/proj/PhD/_sample/ND0209/ND0209.jpg")
+```
+
+# Position
+
+
+
+
+
+
+```{r, fig.width = 6.5, fig.height = 8}
+.xlim <- c(35.7, 59)
+.ylim <- 95.9 - c(0, abs(diff(.xlim)) * 2583 / 1824)
+
+grt %>>%
+  filter(PB) %>>%
+  ggplot(aes(x, y, id = nm)) +
+  annotation_raster(thin, -Inf, Inf, -Inf, Inf) +
+  geom_point(fill = "red", color = "gray40", shape = 21, size = 3) +
+  coord_fixed(
+    xlim = .xlim,
+    ylim = .ylim,
+    expand = FALSE
+  ) +
+  theme_void() +
+  geom_hline(yintercept = 160 - c(67, 70, 76), color = "magenta", lty = 2) +
+  annotate(
+    "text", 
+    label = paste0(c("Grt", "Cpx", "Grt", "Cpx"), "-rich layer"),
+    y = 160 - c(66, 68, 71, 77), x = -Inf, hjust = 0, color = "white"
+  ) +
+  theme(
+    legend.position = "top"
+  )
+```
+
+
+
+# Chem
+
+```{r, fig.width = 5, fig.height = 6, warning = FALSE}
+arrows <- tibble::tribble(
+  ~ var,   ~ x,              ~ y,
+  "Cr2O3", c(.67, .54),      c(0, .12),
+  "XGrs",  c(.67, .60, .54), c(.16, .16, .205),
+) %>>%
+  unnest %>>%
+  mutate(Layer = "Cpx-rich") %>>%
+  mutate(
+    var = latex2exp::TeX(c(XGrs = "X_{Grs}", Cr2O3 = "Cr_2O_3"), output = "character")[var] %>>%
+      forcats::fct_relevel(.["XGrs"][1])
+  )
+
+grt %>>%
+  mutate(
+    # Layer = ifelse(y > 92, "Grt A", ifelse(y > 91, "Cpx A", ifelse(y > 83, "Grt B", "Cpx B"))) %>>%
+    Layer = ifelse(y > 92, "Grt", ifelse(y > 91, "Cpx", ifelse(y > 83, "Grt", "Cpx"))) %>>%
+      str_replace("$", "-rich")
+  ) %>>%
+  select(XMg, XGrs, Cr2O3, Layer, PB) %>>%
+  gather(var, val, -XMg, -Layer, -PB) %>>%
+  bind_rows(data.frame(
+    var = c("XGrs", "Cr2O3"),
+    val = c(.3, .25),
+    Layer = "Cpx-rich"
+  )) %>>%
+  mutate(
+    var = latex2exp::TeX(c(XGrs = "X_{Grs}", Cr2O3 = "Cr_2O_3"), output = "character")[var] %>>%
+      forcats::fct_relevel(.["XGrs"][1])
+  ) %>>%
+  ggplot(aes(XMg, val, color = Layer)) +
+  geom_path(aes(x = x, y = y), color = "gray40", data = arrows, arrow = arrow(), show.legend = FALSE, size = 2) +
+  geom_path(aes(x = x, y = y), data = arrows, arrow = arrow(), show.legend = FALSE, size = 1) +
+  geom_point(data = . %>% filter(PB), color = "gray40", size = 2.5) +
+  geom_point() +
+  facet_wrap(
+    ~var, scales = "free", ncol = 1, strip.position = "left",
+    labeller = label_parsed
+  ) +
+  labs(x = latex2exp::TeX("X_{Mg}")) +
+  xlim(NA, 0.7) +
+  theme_classic() +
+  theme(
+    strip.placement = "outside",
+    strip.background = element_blank(),
+    strip.text = element_text(size = rel(1.1)),
+    axis.title.y = element_blank(),
+    legend.position = c(1, 1),
+    legend.justification = c(1, 1),
+    legend.background = element_rect(fill = "#EEEEEEEE")
+  )
+```
+
+
+
+```{r ggsave, eval = FALSE}
+to <- "/home/atusy/Documents/R/proj/PhD/_fig/ND0209/"
+nm <- "nd0209-grt-chemistry.svg"
+ggsave(nm, width = 5, height = 6)
+dir.create(to, showWarnings = FALSE, recursive = TRUE)
+file.copy(nm, to, overwrite = TRUE)
+```
+
